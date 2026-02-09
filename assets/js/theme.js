@@ -32,7 +32,11 @@
   function updateButton() {
     var btn = document.getElementById('theme-toggle');
     if (!btn) return;
-    btn.textContent = isDark() ? 'Light' : 'Dark';
+    var moon = btn.querySelector('.theme-icon-moon');
+    var sun = btn.querySelector('.theme-icon-sun');
+    var dark = isDark();
+    if (moon) moon.hidden = dark;
+    if (sun) sun.hidden = !dark;
   }
 
   function toggle() {
