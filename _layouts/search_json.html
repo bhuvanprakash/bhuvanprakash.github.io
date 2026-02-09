@@ -1,0 +1,15 @@
+---
+---
+[
+{% assign need_comma = false %}
+{% for post in site.posts %}
+{% if need_comma %},{% endif %}
+{"title":{{ post.title | jsonify }},"url":{{ post.url | relative_url | jsonify }},"description":{{ post.description | default: "" | jsonify }},"content":{{ post.content | strip_html | strip_newlines | replace: "  ", " " | truncate: 400 | jsonify }}}
+{% assign need_comma = true %}
+{% endfor %}
+{% for doc in site.deepdives %}
+{% if need_comma %},{% endif %}
+{"title":{{ doc.title | jsonify }},"url":{{ doc.url | relative_url | jsonify }},"description":{{ doc.description | default: "" | jsonify }},"content":{{ doc.content | strip_html | strip_newlines | replace: "  ", " " | truncate: 400 | jsonify }}}
+{% assign need_comma = true %}
+{% endfor %}
+]

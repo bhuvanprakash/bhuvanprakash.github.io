@@ -25,6 +25,18 @@ permalink: /deep-dive/
     {% endfor %}
   </ul>
 
+  <h2 class="deepdive-subtitle">Talks & papers</h2>
+  <ul class="deepdive-index-list">
+    {% for talk in site.data.talks %}
+    <li class="deepdive-index-item">
+      <a href="{% if talk.url contains 'http' %}{{ talk.url }}{% else %}{{ talk.url | relative_url }}{% endif %}" {% if talk.url contains 'http' %}target="_blank" rel="noopener"{% endif %} class="deepdive-index-link">
+        <span class="deepdive-index-title">{{ talk.title }}</span>
+        <span class="deepdive-index-meta">{{ talk.venue }}{% if talk.date %} · {{ talk.date }}{% endif %}{% if talk.description %} · {{ talk.description }}{% endif %}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
   <h2 class="deepdive-subtitle">References & specs</h2>
   <ul class="deepdive-index-list">
     <li class="deepdive-index-item">

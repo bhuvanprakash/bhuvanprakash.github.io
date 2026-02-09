@@ -1,0 +1,13 @@
+# Featured repos — appears on homepage. Add name, url, description (optional).
+- name: jhol
+  url: https://github.com/bhuvanprakash/jhol
+  description: Decentralized, offline-capable package manager
+- name: Aero
+  url: https://github.com/bhuvanprakash/Aero
+  description: Chunked ML weight container format
+- name: themodelindex
+  url: https://github.com/bhuvanprakash/themodelindex
+  description: Model indexing and discovery
+- name: quantanote
+  url: https://github.com/bhuvanprakash/quantanote
+  description: Quantum notes and experiments

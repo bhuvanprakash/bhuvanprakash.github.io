@@ -1,0 +1,17 @@
+---
+layout: default
+---
+
+<article class="doing-page">
+  <p class="doing-back"><a href="{{ '/projects/' | relative_url }}">← Projects</a></p>
+  <h1 class="doing-page-title">{{ page.title }}</h1>
+  <p class="doing-page-lead">{{ page.description }}{% if page.tech %} · {{ page.tech }}{% endif %}</p>
+  {% if content != "" %}
+  <div class="doing-page-content">
+    {{ content }}
+  </div>
+  {% endif %}
+  {% if page.link %}
+  <p><a href="{{ page.link }}" target="_blank" rel="noopener" class="deep-dive-link">View on GitHub →</a></p>
+  {% endif %}
+</article>

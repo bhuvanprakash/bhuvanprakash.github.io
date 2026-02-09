@@ -3,6 +3,10 @@ title: "Bhuvan Prakash"
 description: "Portfolio & current work"
 baseurl: ""
 url: "https://bhuvanprakash.github.io"
+author:
+  name: "Bhuvan Prakash"
+  email: ""
+  url: "https://bhuvan.space"
 
 # Links (shown in header & footer)
 links:
@@ -27,6 +31,21 @@ collections:
     permalink: /deep-dive/:name/
   projects:
     output: true
+    permalink: /projects/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      layout: post
+      permalink: /blog/:year/:month/:day/:title/
+  - scope:
+      path: "_projects"
+      type: "projects"
+    values:
+      layout: project
 
 # Exclude from processing
 exclude:
@@ -36,5 +55,8 @@ exclude:
   - node_modules
   - vendor
 
-# Plugins (enable when gems are installed)
-plugins: []
+# Plugins (GitHub Pages supports these)
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag

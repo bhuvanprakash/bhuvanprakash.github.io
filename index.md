@@ -6,7 +6,7 @@ description: Portfolio, current work, and what I'm reading
 
 <div class="hero">
   <h1 class="hero-title">Bhuvan Prakash</h1>
-  <p class="hero-tagline">Building, learning, and sharing. This is my corner of the web.</p>
+  <p class="hero-tagline">Building, learning, and sharing. This is my corner of the web. <a href="{{ '/now/' | relative_url }}" class="hero-now">What I'm focused on now</a>.</p>
 </div>
 
 <section class="section doing">
@@ -20,6 +20,21 @@ description: Portfolio, current work, and what I'm reading
         <span class="doing-link-desc">{{ item.description }}</span>
         <span class="doing-link-arrow">→</span>
       </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="section github">
+  <h2 class="section-title">On GitHub</h2>
+  <p class="section-lead">Repos I'm actively building. <a href="{{ site.links.github }}" target="_blank" rel="noopener" class="deep-dive-link">View all →</a></p>
+  <ul class="book-list">
+    {% for repo in site.data.github %}
+    <li class="book-item">
+      <div class="book-main">
+        <a href="{{ repo.url }}" target="_blank" rel="noopener" class="book-title-link">{{ repo.name }}</a>
+        {% if repo.description %}<span class="book-meta">{{ repo.description }}</span>{% endif %}
+      </div>
     </li>
     {% endfor %}
   </ul>

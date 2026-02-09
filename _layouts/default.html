@@ -9,6 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+  {% seo %}
+  <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
 </head>
 <body>
   <div class="page">
@@ -16,12 +19,18 @@
       <a href="{{ '/' | relative_url }}" class="site-name">{{ site.title }}</a>
       <nav class="site-nav">
         <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
         <a href="{{ '/deep-dive/' | relative_url }}">Deep Dive</a>
+        <a href="{{ '/projects/' | relative_url }}">Projects</a>
+        <a href="{{ '/now/' | relative_url }}">Now</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/search/' | relative_url }}">Search</a>
         {% if site.links.website %}<a href="{{ site.links.website }}" target="_blank" rel="noopener">Site</a>{% endif %}
         {% if site.links.github %}<a href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
         {% if site.links.linkedin %}<a href="{{ site.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
         {% if site.links.twitter %}<a href="{{ site.links.twitter }}" target="_blank" rel="noopener">X</a>{% endif %}
         {% if site.links.medium %}<a href="{{ site.links.medium }}" target="_blank" rel="noopener">Medium</a>{% endif %}
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
       </nav>
     </header>
 
@@ -32,6 +41,7 @@
     <footer class="site-footer">
       <p>{{ site.title }} · {{ site.description }}</p>
       <p class="footer-links">
+        <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
         {% if site.links.website %}<a href="{{ site.links.website }}" target="_blank" rel="noopener">bhuvan.space</a>{% endif %}
         {% if site.links.github %}<a href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
         {% if site.links.linkedin %}<a href="{{ site.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
@@ -40,5 +50,11 @@
       </p>
     </footer>
   </div>
+  <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('{{ "/sw.js" | relative_url }}').catch(function() {});
+    }
+  </script>
 </body>
 </html>
