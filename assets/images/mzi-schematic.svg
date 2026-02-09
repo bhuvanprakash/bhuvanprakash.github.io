@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="600" height="240">
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#2d4a3e"/>
+    </marker>
+  </defs>
+  <style>
+    .wg { stroke: #2d4a3e; stroke-width: 2; fill: none; }
+    .box { fill: #f5f4f2; stroke: #2d4a3e; stroke-width: 1.5; }
+    .label { font: 12px 'DM Sans', sans-serif; fill: #1c1c1b; }
+  </style>
+  <!-- Input -->
+  <path class="wg" d="M 0 120 L 80 120" marker-end="url(#arrow)"/>
+  <text class="label" x="0" y="110">In</text>
+  <!-- BS1 -->
+  <rect class="box" x="80" y="95" width="50" height="50" rx="4"/>
+  <text class="label" x="92" y="125">BSÅ</text>
+  <!-- Arm 1 (top) -->
+  <path class="wg" d="M 130 110 L 130 50 L 370 50 L 370 110"/>
+  <path class="wg" d="M 255 50 L 245 50" stroke-width="3" stroke="#6b6b6a"/>
+  <text class="label" x="260" y="42">∆</text>
+  <!-- Arm 2 (bottom) -->
+  <path class="wg" d="M 130 130 L 130 190 L 370 190 L 370 130"/>
+  <!-- BS2 -->
+  <rect class="box" x="370" y="95" width="50" height="50" rx="4"/>
+  <text class="label" x="382" y="125">BSÇ</text>
+  <!-- Outputs -->
+  <path class="wg" d="M 420 110 L 600 80" marker-end="url(#arrow)"/>
+  <path class="wg" d="M 420 130 L 600 160" marker-end="url(#arrow)"/>
+  <text class="label" x="585" y="75">Out 1</text>
+  <text class="label" x="585" y="165">Out 2</text>
+</svg>

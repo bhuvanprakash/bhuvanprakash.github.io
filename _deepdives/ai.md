@@ -24,6 +24,6 @@ order: 1
     <h2>Where I focus</h2>
     <p>My work centers on a few threads: energy-efficient learning (the <a href="{{ '/doing/research/' | relative_url }}">MIRAE</a> direction), model containers and tooling (AERO, fine-tuning platforms), and the intersection of AI with other domains—quantum, photonics, and systems that mix classical and novel hardware. I’m also interested in how we reason about these systems: interpretability, safety, and the messy questions at the edge of science and philosophy. I write and build in that space; this deep dive and the others on this site are part of that.</p>
 
-    <p>More technical deep dives: <a href="{{ '/deep-dive/liquid-ai-models/' | relative_url }}">Liquid AI models</a>, <a href="{{ '/deep-dive/photonics-mzi-quantum-laser/' | relative_url }}">Photonics MZI and quantum computing with laser</a>.</p>
+    <p>More technical deep dives: <a href="{{ '/deep-dive/liquid-ai-models/' | relative_url }}">Liquid AI models</a>, <a href="{{ '/deep-dive/photonics-mzi/' | relative_url }}">Photonics and MZI</a>, <a href="{{ '/deep-dive/quantum-computing-lasers/' | relative_url }}">Quantum computing with lasers</a>.</p>
   </div>
 </article>

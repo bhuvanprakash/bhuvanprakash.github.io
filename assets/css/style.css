@@ -284,6 +284,24 @@ body {
   font-family: ui-monospace, monospace;
 }
 
+.deepdive-figure {
+  margin: 1.5rem 0;
+}
+
+.deepdive-figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.deepdive-figure figcaption {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
 /* Doing list — no cards, clickable rows */
 .doing-list {
   list-style: none;
