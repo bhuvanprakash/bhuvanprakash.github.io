@@ -1,32 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 240" width="600" height="240">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 220" width="540" height="220">
   <defs>
-    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-      <path d="M0 0 L8 4 L0 8 Z" fill="#2d4a3e"/>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#2d4a3e"/>
     </marker>
   </defs>
-  <style>
-    .wg { stroke: #2d4a3e; stroke-width: 2; fill: none; }
-    .box { fill: #f5f4f2; stroke: #2d4a3e; stroke-width: 1.5; }
-    .label { font: 12px 'DM Sans', sans-serif; fill: #1c1c1b; }
-  </style>
-  <!-- Input -->
-  <path class="wg" d="M 0 120 L 80 120" marker-end="url(#arrow)"/>
-  <text class="label" x="0" y="110">In</text>
-  <!-- BS1 -->
-  <rect class="box" x="80" y="95" width="50" height="50" rx="4"/>
-  <text class="label" x="92" y="125">BSÅ</text>
-  <!-- Arm 1 (top) -->
-  <path class="wg" d="M 130 110 L 130 50 L 370 50 L 370 110"/>
-  <path class="wg" d="M 255 50 L 245 50" stroke-width="3" stroke="#6b6b6a"/>
-  <text class="label" x="260" y="42">∆</text>
-  <!-- Arm 2 (bottom) -->
-  <path class="wg" d="M 130 130 L 130 190 L 370 190 L 370 130"/>
-  <!-- BS2 -->
-  <rect class="box" x="370" y="95" width="50" height="50" rx="4"/>
-  <text class="label" x="382" y="125">BSÇ</text>
-  <!-- Outputs -->
-  <path class="wg" d="M 420 110 L 600 80" marker-end="url(#arrow)"/>
-  <path class="wg" d="M 420 130 L 600 160" marker-end="url(#arrow)"/>
-  <text class="label" x="585" y="75">Out 1</text>
-  <text class="label" x="585" y="165">Out 2</text>
+  <!-- Input waveguide -->
+  <line x1="0" y1="110" x2="75" y2="110" stroke="#2d4a3e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M65 110 H78" stroke="#2d4a3e" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <!-- Beam splitter 1 (rectangle) -->
+  <rect x="75" y="85" width="40" height="50" rx="5" fill="#f5f4f2" stroke="#2d4a3e" stroke-width="2"/>
+  <!-- Top arm: left to right with phase -->
+  <path d="M115 85 H235 V65 H325 V85 H415" stroke="#2d4a3e" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M405 85 H432" stroke="#2d4a3e" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <!-- Phase shifter on top arm -->
+  <rect x="238" y="48" width="52" height="28" rx="4" fill="#e8e6e3" stroke="#6b6b6a" stroke-width="1.5"/>
+  <!-- Bottom arm -->
+  <path d="M115 135 H235 V155 H325 V135 H415" stroke="#2d4a3e" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M405 135 H432" stroke="#2d4a3e" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <!-- Beam splitter 2 -->
+  <rect x="415" y="85" width="40" height="50" rx="5" fill="#f5f4f2" stroke="#2d4a3e" stroke-width="2"/>
+  <!-- Output 1 -->
+  <line x1="455" y1="85" x2="535" y2="55" stroke="#2d4a3e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M525 60 L538 52" stroke="#2d4a3e" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <!-- Output 2 -->
+  <line x1="455" y1="135" x2="535" y2="165" stroke="#2d4a3e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M525 160 L538 168" stroke="#2d4a3e" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <!-- Labels -->
+  <text x="5" y="105" font-family="system-ui, sans-serif" font-size="13" fill="#1c1c1b">Input</text>
+  <text x="82" y="113" font-family="system-ui, sans-serif" font-size="11" fill="#1c1c1b">BS1</text>
+  <text x="248" y="67" font-family="system-ui, sans-serif" font-size="10" fill="#1c1c1b">phase</text>
+  <text x="422" y="113" font-family="system-ui, sans-serif" font-size="11" fill="#1c1c1b">BS2</text>
+  <text x="538" y="48" font-family="system-ui, sans-serif" font-size="12" fill="#1c1c1b">Out 1</text>
+  <text x="538" y="178" font-family="system-ui, sans-serif" font-size="12" fill="#1c1c1b">Out 2</text>
 </svg>

@@ -19,7 +19,7 @@ order: 3
     <p>Photonics is the science and engineering of light: generation, guiding, modulation, and detection. Unlike electronics, where electrons carry information, photonics uses photons. That gives advantages in speed, bandwidth, and immunity to electromagnetic interference. This deep dive focuses on <strong>integrated photonics</strong>—putting optical components on a chip—and on one of its fundamental building blocks: the <strong>Mach–Zehnder interferometer (MZI)</strong>.</p>
 
     <figure class="deepdive-figure">
-      <img src="{{ '/assets/images/mzi-schematic.svg' | relative_url }}" alt="Mach-Zehnder interferometer schematic: input beam splitter, two arms with phase shifter, output beam splitter." width="600" height="240">
+      <img src="{{ '/assets/images/mzi-schematic.svg' | relative_url }}" alt="Mach-Zehnder interferometer: input, BS1, two arms (phase φ), BS2, Out 1 and Out 2." width="640" height="320">
       <figcaption>Fig. 1 — Mach–Zehnder interferometer: input split at BS₁, two arms (one with phase φ), recombined at BS₂. Output depends on phase difference.</figcaption>
     </figure>
 
