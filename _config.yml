@@ -1,0 +1,38 @@
+# Jekyll configuration for GitHub Pages
+title: "Bhuvan Prakash"
+description: "Portfolio & current work"
+baseurl: ""
+url: "https://bhuvanprakash.github.io"
+
+# Links (shown in header & footer)
+links:
+  website: "https://bhuvan.space"
+  github: "https://github.com/bhuvanprakash"
+  linkedin: "https://www.linkedin.com/in/bhuvanprakash/"
+
+# Build
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  doing:
+    output: true
+    permalink: /doing/:name/
+  deepdives:
+    output: true
+    permalink: /deep-dive/:name/
+  projects:
+    output: true
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+
+# Plugins (enable when gems are installed)
+plugins: []

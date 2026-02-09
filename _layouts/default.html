@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a href="{{ '/' | relative_url }}" class="site-name">{{ site.title }}</a>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/deep-dive/' | relative_url }}">Deep Dive</a>
+        {% if site.links.website %}<a href="{{ site.links.website }}" target="_blank" rel="noopener">Site</a>{% endif %}
+        {% if site.links.github %}<a href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+        {% if site.links.linkedin %}<a href="{{ site.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+      </nav>
+    </header>
+
+    <main class="main">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>{{ site.title }} · {{ site.description }}</p>
+      <p class="footer-links">
+        {% if site.links.website %}<a href="{{ site.links.website }}" target="_blank" rel="noopener">bhuvan.space</a>{% endif %}
+        {% if site.links.github %}<a href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+        {% if site.links.linkedin %}<a href="{{ site.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

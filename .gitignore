@@ -1,0 +1,6 @@
+_site/
+vendor/
+.bundle/
+*.gem
+Gemfile.lock
+.DS_Store
