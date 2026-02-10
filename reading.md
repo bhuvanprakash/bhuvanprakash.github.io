@@ -18,15 +18,12 @@ permalink: /reading/
   <div class="reading-grid">
     {% for book in site.data.reading %}
     <article class="book-tile">
-      {% if book.url %}
-      <a href="{{ book.url }}" target="_blank" rel="noopener" class="book-tile-link">
-      {% endif %}
-        <span class="book-tile-title">{{ book.title }}</span>
-        <span class="book-tile-meta">{{ book.author }}{% if book.year %} · {{ book.year }}{% endif %}</span>
+      {% if book.url %}<a href="{{ book.url }}" target="_blank" rel="noopener" class="book-tile-link">{% endif %}
+        {% if book.year %}<span class="book-tile-year">{{ book.year }}</span>{% endif %}
+        <h2 class="book-tile-title">{{ book.title }}</h2>
+        <p class="book-tile-meta">{{ book.author }}</p>
         {% if book.summary %}<p class="book-tile-summary">{{ book.summary }}</p>{% endif %}
-      {% if book.url %}
-      </a>
-      {% endif %}
+      {% if book.url %}</a>{% endif %}
     </article>
     {% endfor %}
   </div>

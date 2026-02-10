@@ -578,7 +578,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Reading page (/reading/) — compact grid, more books above the fold */
+/* Reading page (/reading/) — Mobbin-inspired: clean cards, soft shadow, clear hierarchy */
 .reading-page {
   max-width: 56rem;
 }
@@ -589,16 +589,16 @@ body {
 
 .reading-title {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-size: clamp(1.65rem, 4vw, 2.1rem);
   font-weight: 500;
   letter-spacing: -0.02em;
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.35rem 0;
   color: var(--text);
 }
 
 .reading-lead {
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.9375rem;
+  line-height: 1.55;
   margin: 0;
   color: var(--text-muted);
 }
@@ -613,25 +613,38 @@ body {
   text-decoration: underline;
 }
 
-/* 3-col grid: compact tiles, 2-line summary clamp */
+/* Grid: 3 cols desktop, consistent gap */
 .reading-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
+/* Card: borderless, soft shadow, 12px radius — Mobbin-style */
 .book-tile {
-  background: var(--bg-soft);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 1rem 1.15rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  border-left: 3px solid var(--accent);
+  background: var(--bg);
+  border: none;
+  border-radius: 12px;
+  padding: 1.25rem 1.35rem;
+  transition: box-shadow 0.2s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.book-tile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  opacity: 0.6;
 }
 
 .book-tile:hover {
-  border-color: var(--accent-soft);
-  box-shadow: 0 4px 16px rgba(45, 74, 62, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.03);
 }
 
 .book-tile-link {
@@ -644,29 +657,42 @@ body {
   color: var(--accent);
 }
 
+/* Year pill */
+.book-tile-year {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(45, 74, 62, 0.08);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+
 .book-tile-title {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.12rem;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.32;
   color: var(--text);
-  display: block;
-  margin-bottom: 0.25rem;
+  margin: 0 0 0.2rem 0;
   transition: color 0.2s ease;
 }
 
 .book-tile-meta {
-  font-size: 0.8rem;
+  font-size: 0.8125rem;
   color: var(--text-muted);
   font-weight: 500;
-  letter-spacing: 0.03em;
-  display: block;
-  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
 }
 
 .book-tile-summary {
-  font-size: 0.9rem;
-  line-height: 1.5;
+  font-size: 0.875rem;
+  line-height: 1.52;
   color: var(--text-muted);
   margin: 0;
   display: -webkit-box;
@@ -678,6 +704,7 @@ body {
 @media (max-width: 900px) {
   .reading-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
@@ -882,8 +909,18 @@ body {
   background: rgba(122, 184, 154, 0.08);
 }
 
+:root.dark .book-tile {
+  background: var(--bg-soft);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
 :root.dark .book-tile:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+}
+
+:root.dark .book-tile-year {
+  background: rgba(122, 184, 154, 0.15);
+  color: var(--accent);
 }
 
 /* Search */
@@ -982,14 +1019,14 @@ body {
 
   .reading-grid {
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 0.875rem;
   }
 
   .book-tile {
-    padding: 0.9rem 1rem;
+    padding: 1rem 1.15rem;
   }
 
   .book-tile-title {
-    font-size: 1.05rem;
+    font-size: 1.06rem;
   }
 }
