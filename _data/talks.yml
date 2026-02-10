@@ -1,16 +1,3 @@
-# Talks and papers — add title, venue, date, url (optional), description (optional)
-- title: "AERO format spec"
-  venue: "GitHub / docs"
-  date: "2024"
-  url: "https://github.com/bhuvanprakash/Aero/blob/main/docs/FORMAT.md"
-  description: "Chunked ML weight container: header, TOC, BLAKE3, mmap-safe design."
-- title: "Photonics and Mach–Zehnder interferometers"
-  venue: "Deep Dive"
-  date: "2025"
-  url: "/deep-dive/photonics-mzi/"
-  description: "How MZIs work and why they matter for integrated photonics."
-- title: "Quantum computing with lasers"
-  venue: "Deep Dive"
-  date: "2025"
-  url: "/deep-dive/quantum-computing-lasers/"
-  description: "Optical approaches to quantum information."
+# Talks and papers — external slides and papers (no duplicates of Deep Dive articles)
+# Add items with: title, venue, date, url, description (or summary)
+[]

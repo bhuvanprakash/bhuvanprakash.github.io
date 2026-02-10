@@ -11,11 +11,13 @@ permalink: /deep-dive/
 
 <article class="doing-page">
   <h1 class="doing-page-title">Deep Dive</h1>
-  <p class="doing-page-lead">In-depth write-ups on AI, liquid neural networks, photonics, and quantum computing. Same left-border style you liked—each item goes to a full article.</p>
+  <p class="doing-page-lead">In-depth write-ups on AI, liquid neural networks, photonics, quantum computing, and papers I care about. Each link opens a full article.</p>
 
+  <h2 class="deepdive-subtitle">Articles</h2>
+  <p class="deepdive-section-lead">Long-form technical write-ups.</p>
   <ul class="deepdive-index-list">
-    {% assign sorted = site.deepdives | sort: "order" %}
-    {% for doc in sorted %}
+    {% assign articles = site.deepdives | where_exp: "d", "d.section != 'talks'" | sort: "order" %}
+    {% for doc in articles %}
     <li class="deepdive-index-item">
       <a href="{{ doc.url | relative_url }}" class="deepdive-index-link">
         <span class="deepdive-index-title">{{ doc.title }}</span>
@@ -26,6 +28,8 @@ permalink: /deep-dive/
   </ul>
 
   <h2 class="deepdive-subtitle">Talks & papers</h2>
+  <p class="deepdive-section-lead">Paper summaries and external slides. Full write-ups live here on the site.</p>
+  {% assign talk_docs = site.deepdives | where_exp: "d", "d.section == 'talks'" | sort: "order" %}
   <ul class="deepdive-index-list">
     {% for talk in site.data.talks %}
     <li class="deepdive-index-item">
@@ -35,9 +39,22 @@ permalink: /deep-dive/
       </a>
     </li>
     {% endfor %}
+    {% for doc in talk_docs %}
+    <li class="deepdive-index-item">
+      <a href="{{ doc.url | relative_url }}" class="deepdive-index-link">
+        <span class="deepdive-index-title">{{ doc.title }}</span>
+        <span class="deepdive-index-meta">{{ doc.description }}</span>
+      </a>
+    </li>
+    {% endfor %}
   </ul>
+  {% assign has_talks = site.data.talks.size | plus: talk_docs.size %}
+  {% unless has_talks > 0 %}
+  <p class="deepdive-section-empty">None listed yet.</p>
+  {% endunless %}
 
   <h2 class="deepdive-subtitle">References & specs</h2>
+  <p class="deepdive-section-lead">Format docs and project references.</p>
   <ul class="deepdive-index-list">
     <li class="deepdive-index-item">
       <a href="https://github.com/bhuvanprakash/Aero/blob/main/docs/FORMAT.md" target="_blank" rel="noopener" class="deepdive-index-link">

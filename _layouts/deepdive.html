@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{{ content }}
+
+{% assign w = content | strip_html | number_of_words %}
+{% assign mins = w | divided_by: 200 | at_least: 1 %}
+<p class="deepdive-reading-time">About {{ mins }} min read</p>
+
+{% assign others = site.deepdives | where_exp: "d", "d.url != page.url" | sort: "order" %}
+{% if others.size > 0 %}
+<aside class="deepdive-related">
+  <h2 class="deepdive-related-title">Related</h2>
+  <ul class="deepdive-index-list">
+    {% for doc in others limit: 3 %}
+    <li class="deepdive-index-item">
+      <a href="{{ doc.url | relative_url }}" class="deepdive-index-link">
+        <span class="deepdive-index-title">{{ doc.title }}</span>
+        <span class="deepdive-index-meta">{{ doc.description }}</span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</aside>
+{% endif %}

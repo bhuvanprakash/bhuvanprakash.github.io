@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: deepdive
 title: "Quantum Computing with Lasers"
 description: "Laser-driven qubits, optical quantum systems, and scaling."
 order: 4

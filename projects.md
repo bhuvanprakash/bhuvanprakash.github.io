@@ -11,7 +11,7 @@ permalink: /projects/
 
 <article class="doing-page">
   <h1 class="doing-page-title">Projects</h1>
-  <p class="doing-page-lead">Open-source and side projects I build and maintain. More on <a href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub</a>.</p>
+  <p class="doing-page-lead">Open-source and side projects I build and maintain. Descriptions and links below; more on <a href="{{ site.links.github }}" target="_blank" rel="noopener">GitHub</a>.</p>
 
   <ul class="deepdive-index-list">
     {% assign sorted = site.projects | sort: "order" %}

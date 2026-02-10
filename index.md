@@ -48,24 +48,8 @@ description: Portfolio, current work, and what I'm reading
 
 <section class="section reading">
   <h2 class="section-title">What I'm reading</h2>
-  <p class="section-lead">Books that shape how I build and think. I’ll add more as I go.</p>
-  <ul class="book-list">
-    {% for book in site.data.reading %}
-    <li class="book-item">
-      <div class="book-main">
-        {% if book.url %}
-        <a href="{{ book.url }}" target="_blank" rel="noopener" class="book-title-link">{{ book.title }}</a>
-        {% else %}
-        <span class="book-title">{{ book.title }}</span>
-        {% endif %}
-        <span class="book-meta">{{ book.author }}{% if book.year %} · {{ book.year }}{% endif %}{% if book.note %} · {{ book.note }}{% endif %}</span>
-      </div>
-      {% if book.why %}
-      <p class="book-why">{{ book.why }}</p>
-      {% endif %}
-    </li>
-    {% endfor %}
-  </ul>
+  <p class="section-lead">Books that shape how I build and think.</p>
+  <p><a href="{{ '/reading/' | relative_url }}" class="deep-dive-link">View all books →</a></p>
 </section>
 
 <section class="section more">

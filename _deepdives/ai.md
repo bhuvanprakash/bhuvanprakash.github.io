@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: deepdive
 title: "AI — What I Mean When I Say AI"
 description: "Scale, efficiency, and where I put my focus."
 order: 1

@@ -11,7 +11,7 @@ permalink: /blog/
 
 <article class="doing-page">
   <h1 class="doing-page-title">Blog</h1>
-  <p class="doing-page-lead">Short updates, notes from building, and occasional longer essays. For in-depth technical write-ups, see <a href="{{ '/deep-dive/' | relative_url }}">Deep Dive</a>.</p>
+  <p class="doing-page-lead">Short updates, notes from building, and occasional essays. For longer technical articles, see <a href="{{ '/deep-dive/' | relative_url }}">Deep Dive</a>.</p>
 
   <ul class="deepdive-index-list">
     {% for post in site.posts %}
@@ -23,4 +23,7 @@ permalink: /blog/
     </li>
     {% endfor %}
   </ul>
+  {% if site.posts.size == 0 %}
+  <p class="deepdive-section-empty">No posts yet.</p>
+  {% endif %}
 </article>

@@ -1,13 +1,43 @@
-# What I'm reading — edit to update. Optional: url, year, why
-- title: "Deep Work"
-  author: Cal Newport
-  note: Re-reading for focus and flow.
-  year: "2016"
-  why: "Sharpening focus and building a deep-work habit so I can ship more with less context-switching."
-  url: "https://www.calnewport.com/books/deep-work/"
-- title: "The Design of Everyday Things"
-  author: Don Norman
-  note: UX fundamentals.
+# What I'm reading — edit to update. Optional: url, year, summary, why. Full list: Notion Book Tracker.
+- title: "Thinking, Fast and Slow"
+  author: Daniel Kahneman
+  year: "2011"
+  summary: "How two systems drive the way we think: fast, intuitive System 1 and slow, deliberate System 2—and how biases shape decisions without us knowing."
+- title: "The Courage To Be Disliked"
+  author: Ichiro Kishimi, Fumitake Koga
   year: "2013"
-  why: "Foundations of how people interact with systems—essential for building things that feel right."
-  url: "https://www.nngroup.com/books/design-everyday-things-revised/"
+  summary: "A dialogue that introduces Adlerian psychology: we can choose our own path, free from the need for others' approval and from the weight of past trauma."
+- title: "The Psychology of Money"
+  author: Morgan Housel
+  year: "2020"
+  summary: "Timeless lessons on wealth, greed, and happiness. It’s not about the math—it’s about the stories we tell ourselves and the behaviors that compound over time."
+- title: "Atomic Habits"
+  author: James Clear
+  year: "2018"
+  summary: "Small changes compound. Clear breaks down how to build good habits and break bad ones with systems, identity, and environment design."
+- title: "Ego Is The Enemy"
+  author: Ryan Holiday
+  year: "2016"
+  summary: "How ego gets in the way of growth, learning, and success—and why humility and focus on the work beat the need to be right or celebrated."
+- title: "The Things You Can See Only When You Slow Down"
+  author: Haemin Sunim
+  year: "2012"
+  summary: "Short reflections on rest, attention, and seeing clearly. A Buddhist teacher’s take on modern anxiety and the value of slowing down."
+- title: "Indistractable"
+  author: Nir Eyal
+  year: "2019"
+  summary: "Why we get distracted and how to become indistractable: internal triggers, timeboxing, and redesigning your environment and habits."
+- title: "The Art of Persuasion"
+  summary: "Classic ideas on rhetoric and influence."
+- title: "The Power of Your Subconscious Mind"
+  author: Joseph Murphy
+  year: "1963"
+  summary: "How the subconscious shapes our reality and how to align it with our goals through belief, visualization, and repeated suggestion."
+- title: "The Lean Startup"
+  author: Eric Ries
+  year: "2011"
+  summary: "Build–measure–learn: validate ideas with minimum viable products, use metrics that matter, and pivot or persevere based on evidence."
+- title: "The Myth of Sisyphus"
+  author: Albert Camus
+  year: "1942"
+  summary: "Camus asks whether life is worth living once we accept the absurd. His answer: revolt, freedom, and passion—living fully without illusion."

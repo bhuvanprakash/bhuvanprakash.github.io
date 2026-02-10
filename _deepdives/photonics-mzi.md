@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: deepdive
 title: "Photonics and Mach–Zehnder Interferometers"
 description: "Integrated photonics, MZI building blocks, and programmable optical circuits."
 order: 3

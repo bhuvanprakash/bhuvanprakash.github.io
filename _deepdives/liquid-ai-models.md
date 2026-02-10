@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: deepdive
 title: "Liquid AI Models"
 description: "Continuous-time, compact neural networks that adapt on the fly."
 order: 2

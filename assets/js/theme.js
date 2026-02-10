@@ -18,7 +18,7 @@
   }
 
   function isDark() {
-    return root.classList.contains('dark') || (!root.classList.contains('light') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    return root.classList.contains('dark');
   }
 
   function apply(theme) {
@@ -46,7 +46,10 @@
   (function init() {
     var stored = getStored();
     if (stored === 'dark' || stored === 'light') apply(stored);
-    else updateButton();
+    else {
+      root.classList.remove('dark', 'light');
+      updateButton();
+    }
 
     var btn = document.getElementById('theme-toggle');
     if (btn) btn.addEventListener('click', toggle);

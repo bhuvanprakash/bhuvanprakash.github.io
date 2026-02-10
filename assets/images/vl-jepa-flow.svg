@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 200" width="480" height="200">
+  <defs>
+    <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#2d4a3e"/>
+    </marker>
+  </defs>
+  <text x="240" y="20" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#1c1c1b">How VL-JEPA uses the embedding</text>
+  <!-- Input -->
+  <rect x="20" y="42" width="100" height="44" rx="4" fill="#f5f4f2" stroke="#e8e6e3" stroke-width="1.5"/>
+  <text x="70" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#1c1c1b">Image +</text>
+  <text x="70" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#1c1c1b">(optional question)</text>
+  <path d="M120 64 H165" stroke="#2d4a3e" stroke-width="2" marker-end="url(#ar)"/>
+  <!-- Encode + predict -->
+  <rect x="165" y="42" width="90" height="44" rx="4" fill="#e8e6e3" stroke="#2d4a3e" stroke-width="1.5"/>
+  <text x="210" y="62" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#1c1c1b">Encode &amp; predict</text>
+  <text x="210" y="76" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#6b6b6a">target embedding z</text>
+  <path d="M255 64 H300" stroke="#2d4a3e" stroke-width="2" marker-end="url(#ar)"/>
+  <!-- Three outputs -->
+  <rect x="300" y="28" width="85" height="36" rx="4" fill="#f5f4f2" stroke="#2d4a3e" stroke-width="1.5"/>
+  <text x="342" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#1c1c1b">Classification</text>
+  <text x="342" y="58" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#6b6b6a">(no decode)</text>
+  <rect x="300" y="72" width="85" height="36" rx="4" fill="#f5f4f2" stroke="#2d4a3e" stroke-width="1.5"/>
+  <text x="342" y="90" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#1c1c1b">Retrieval</text>
+  <text x="342" y="100" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#6b6b6a">(compare zs)</text>
+  <rect x="300" y="116" width="85" height="36" rx="4" fill="#f5f4f2" stroke="#2d4a3e" stroke-width="1.5"/>
+  <text x="342" y="134" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#1c1c1b">Generate text</text>
+  <text x="342" y="144" text-anchor="middle" font-family="system-ui, sans-serif" font-size="8" fill="#6b6b6a">(light decoder)</text>
+  <!-- Branches from z -->
+  <path d="M300 64 L300 46" stroke="#2d4a3e" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M300 64 L300 90" stroke="#2d4a3e" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M300 64 L300 134" stroke="#2d4a3e" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <text x="395" y="50" font-family="system-ui, sans-serif" font-size="9" fill="#6b6b6a">same z</text>
+  <text x="395" y="92" font-family="system-ui, sans-serif" font-size="9" fill="#6b6b6a">same z</text>
+  <text x="395" y="136" font-family="system-ui, sans-serif" font-size="9" fill="#6b6b6a">same z</text>
+  <text x="240" y="178" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#6b6b6a">One embedding supports many tasks without extra task-specific heads.</text>
+</svg>
