@@ -13,9 +13,13 @@ permalink: /reading/
   <header class="reading-header">
     <h1 class="reading-title">What I'm reading</h1>
     <p class="reading-lead">Books that shape how I build and think. <a href="https://www.notion.so/Book-Tracker-7ecb5138fee148c0b08f2cbf97b46c43" target="_blank" rel="noopener" class="reading-notion-inline">Full list on Notion →</a></p>
+    <div class="reading-filter-wrap">
+      <label for="reading-search" class="visually-hidden">Filter books by title or author</label>
+      <input type="text" id="reading-search" class="reading-search" placeholder="Filter by title or author…" autocomplete="off">
+    </div>
   </header>
 
-  <div class="reading-grid">
+  <div class="reading-grid" id="reading-grid">
     {% for book in site.data.reading %}
     <article class="book-tile">
       {% if book.url %}<a href="{{ book.url }}" target="_blank" rel="noopener" class="book-tile-link">{% endif %}

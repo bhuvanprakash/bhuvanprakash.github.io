@@ -1,0 +1,38 @@
+---
+layout: default
+title: Page not found
+description: The page you're looking for doesn't exist.
+permalink: /404.html
+---
+
+<div class="hero">
+  <h1 class="hero-title">404</h1>
+  <p class="hero-tagline">That page isn’t here. Maybe it moved or the link is wrong.</p>
+</div>
+
+<section class="section">
+  <p class="section-lead">Try one of these:</p>
+  <ul class="doing-list">
+    <li class="doing-item">
+      <a href="{{ '/' | relative_url }}" class="doing-link">
+        <span class="doing-link-title">Home</span>
+        <span class="doing-link-desc">Back to the homepage</span>
+        <span class="doing-link-arrow">→</span>
+      </a>
+    </li>
+    <li class="doing-item">
+      <a href="{{ '/blog/' | relative_url }}" class="doing-link">
+        <span class="doing-link-title">Blog</span>
+        <span class="doing-link-desc">Recent posts</span>
+        <span class="doing-link-arrow">→</span>
+      </a>
+    </li>
+    <li class="doing-item">
+      <a href="{{ '/search/' | relative_url }}" class="doing-link">
+        <span class="doing-link-title">Search</span>
+        <span class="doing-link-desc">Find something</span>
+        <span class="doing-link-arrow">→</span>
+      </a>
+    </li>
+  </ul>
+</section>
