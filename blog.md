@@ -13,12 +13,13 @@ permalink: /blog/
   <h1 class="doing-page-title">Blog</h1>
   <p class="doing-page-lead">Short updates, notes from building, and occasional essays. For longer technical articles, see <a href="{{ '/deep-dive/' | relative_url }}">Deep Dive</a>.</p>
 
-  <ul class="deepdive-index-list">
+  <ul class="blog-index-list">
     {% for post in site.posts %}
-    <li class="deepdive-index-item">
-      <a href="{{ post.url | relative_url }}" class="deepdive-index-link">
-        <span class="deepdive-index-title">{{ post.title }}</span>
-        <span class="deepdive-index-meta">{{ post.date | date: "%B %d, %Y" }}{% if post.description %} · {{ post.description }}{% endif %}</span>
+    <li class="blog-index-item">
+      <a href="{{ post.url | relative_url }}" class="blog-index-link">
+        <span class="blog-index-title">{{ post.title }}</span>
+        <span class="blog-index-meta">{{ post.date | date: "%B %d, %Y" }}{% assign wc = post.content | number_of_words %}{% if wc > 0 %} · {{ wc | divided_by: 200 | plus: 1 }} min read{% endif %}</span>
+        {% if post.description %}<span class="blog-index-excerpt">{{ post.description }}</span>{% endif %}
       </a>
     </li>
     {% endfor %}

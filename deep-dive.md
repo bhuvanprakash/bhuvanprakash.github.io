@@ -15,7 +15,7 @@ permalink: /deep-dive/
 
   <h2 class="deepdive-subtitle">Articles</h2>
   <p class="deepdive-section-lead">Long-form technical write-ups.</p>
-  <ul class="deepdive-index-list">
+  <ul class="deepdive-index-list deepdive-index-section">
     {% assign articles = site.deepdives | where_exp: "d", "d.section != 'talks'" | sort: "order" %}
     {% for doc in articles %}
     <li class="deepdive-index-item">
@@ -30,7 +30,7 @@ permalink: /deep-dive/
   <h2 class="deepdive-subtitle">Talks & papers</h2>
   <p class="deepdive-section-lead">Paper summaries and external slides. Full write-ups live here on the site.</p>
   {% assign talk_docs = site.deepdives | where_exp: "d", "d.section == 'talks'" | sort: "order" %}
-  <ul class="deepdive-index-list">
+  <ul class="deepdive-index-list deepdive-index-section">
     {% for talk in site.data.talks %}
     <li class="deepdive-index-item">
       <a href="{% if talk.url contains 'http' %}{{ talk.url }}{% else %}{{ talk.url | relative_url }}{% endif %}" {% if talk.url contains 'http' %}target="_blank" rel="noopener"{% endif %} class="deepdive-index-link">
@@ -49,13 +49,13 @@ permalink: /deep-dive/
     {% endfor %}
   </ul>
   {% assign has_talks = site.data.talks.size | plus: talk_docs.size %}
-  {% unless has_talks > 0 %}
+  {% if has_talks == 0 %}
   <p class="deepdive-section-empty">None listed yet.</p>
-  {% endunless %}
+  {% endif %}
 
   <h2 class="deepdive-subtitle">References & specs</h2>
   <p class="deepdive-section-lead">Format docs and project references.</p>
-  <ul class="deepdive-index-list">
+  <ul class="deepdive-index-list deepdive-index-section deepdive-index-section-last">
     <li class="deepdive-index-item">
       <a href="https://github.com/bhuvanprakash/Aero/blob/main/docs/FORMAT.md" target="_blank" rel="noopener" class="deepdive-index-link">
         <span class="deepdive-index-title">AERO format spec</span>
@@ -71,7 +71,7 @@ permalink: /deep-dive/
     <li class="deepdive-index-item">
       <a href="{{ '/doing/research/' | relative_url }}" class="deepdive-index-link">
         <span class="deepdive-index-title">Research</span>
-        <span class="deepdive-index-meta">MIRAE, quantum prototype, fine-tuning platform.</span>
+        <span class="deepdive-index-meta">MIRAE, photonics GPU, fine-tuning platform.</span>
       </a>
     </li>
   </ul>

@@ -27,17 +27,8 @@ description: Portfolio, current work, and what I'm reading
 
 <section class="section github">
   <h2 class="section-title">On GitHub</h2>
-  <p class="section-lead">Repos I'm actively building. <a href="{{ site.links.github }}" target="_blank" rel="noopener" class="deep-dive-link">View all →</a></p>
-  <ul class="book-list">
-    {% for repo in site.data.github %}
-    <li class="book-item">
-      <div class="book-main">
-        <a href="{{ repo.url }}" target="_blank" rel="noopener" class="book-title-link">{{ repo.name }}</a>
-        {% if repo.description %}<span class="book-meta">{{ repo.description }}</span>{% endif %}
-      </div>
-    </li>
-    {% endfor %}
-  </ul>
+  <p class="section-lead">Repos I'm actively building.</p>
+  <p><a href="{{ site.links.github }}" target="_blank" rel="noopener" class="deep-dive-link">View all →</a></p>
 </section>
 
 <section class="section deep-dive">
@@ -53,5 +44,5 @@ description: Portfolio, current work, and what I'm reading
 </section>
 
 <section class="section more">
-  <p class="more-text">More projects and writing coming soon.</p>
+  <p class="more-cta"><a href="{{ '/projects/' | relative_url }}" class="deep-dive-link">Browse projects</a> · <a href="{{ '/blog/' | relative_url }}" class="deep-dive-link">Read the blog</a></p>
 </section>

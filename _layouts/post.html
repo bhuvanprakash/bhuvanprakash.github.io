@@ -4,10 +4,13 @@ layout: default
 
 <article class="post-article">
   <header class="post-header">
-    <p class="post-back"><a href="{{ '/blog/' | relative_url }}">← Blog</a></p>
+    <div class="doing-back">
+      <a href="{{ '/blog/' | relative_url }}">← Blog</a>
+    </div>
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>
+      {% assign wc = content | number_of_words %}{% if wc > 0 %} · {{ wc | divided_by: 200 | plus: 1 }} min read{% endif %}
       {% if page.author %} · {{ page.author }}{% endif %}
     </p>
   </header>
